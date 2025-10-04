@@ -6,7 +6,7 @@
 
 Documentation: 
 I built a hand gesture tracking tool to draw in space and create memories with it  to simulate a daily-sketch of your life.
-(update 0.5 effect paper + metal ) 
+*(update 0.5 effect paper + metal )*
 
 - Close hand = stop drawing 
 - Open hand = start drawing (only index supported rn) 
