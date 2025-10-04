@@ -1,16 +1,42 @@
-# gesture-thinking-
+# Hand Gesture Drawing (Web + Python API)
 
-<img width="1200" height="440" alt="Screenshot 2025-10-04 at 11 21 24 AM" src="https://github.com/user-attachments/assets/861c5310-6ab6-4dbb-8ae8-ab3e9286919d" />
+This project lets users draw using hand gestures in the browser using MediaPipe Hands (JS). Drawings can be saved to SQLite via a small Python Flask API. Two visual effects (paper, metal) are applied to the drawing canvas using OpenCV.js.
 
-# Drawing IS NOT reduced to be a graphical or even visual thing but it’s the intricate understanding of gesture of everything that’s real. 
+## Prerequisites
+- Python 3.9+
+- Node is NOT required. We can use a simple static file server.
+- Chrome on desktop with webcam permissions.
 
-Documentation: 
-I built a hand gesture tracking tool to draw in space and create memories with it  to simulate a daily-sketch of your life.
-*(update 0.5 effect paper + metal )*
+## Folder Layout
+- `web/` — static frontend (HTML/CSS/JS)
+- `server/` — Python Flask API with SQLite
 
-- Close hand = stop drawing 
-- Open hand = start drawing (only index supported rn) 
-- Functions: 
-*Clear, Save, Color desk, Size Bar, Start/Stop Drawing.*
-*Build in mediapipe, opencv (effects), python and pygame (hand tracking), Java, HTML/Tailwind CSS with paper.design (icons and export effect)*
+## 1) Start the Python API
+```
+cd "server"
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python app.py
+```
+The API will run at `http://127.0.0.1:5001`.
 
+## 2) Start a local static server for the frontend
+Use Python's http server:
+```
+cd "../web"
+python3 -m http.server 8080
+```
+Visit `http://127.0.0.1:8080` in Chrome.
+
+Grant the page access to your webcam. Use the controls to start/stop drawing, change pen, apply effects, clear, and save. Saved drawings appear in the right sidebar, loaded from SQLite via the API.
+
+## Notes
+- Effects are applied on the drawing canvas only, not the camera feed.
+- If OpenCV.js hasn't finished loading yet, effects are skipped until ready.
+- If the gallery is empty, ensure the API is running and CORS is allowed.
+
+## Troubleshooting
+- If camera doesn't start: check browser permissions and that no other app uses the webcam.
+- If save fails: confirm the API server logs show requests and `drawings.db` is created in `server/`.
+- Use Chrome DevTools Console for any JS errors. 

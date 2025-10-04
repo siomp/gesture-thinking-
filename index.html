@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hand Gesture Drawing</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="overlay">
+    <div class="controls">
+      <button id="toggle-draw" title="Toggle Drawing">
+        <img src="./web/assets/icon-pen.svg" alt="Toggle Drawing" />
+      </button>
+      <label title="Pen Size">
+        <input id="pen-size" type="range" min="1" max="10" value="5" />
+      </label>
+      <input id="pen-color" type="color" value="#ff0000" title="Pen Color" />
+      <select id="effect" title="Effect">
+        <option value="none">No Effect</option>
+        <option value="paper">Paper</option>
+        <option value="metal">Metal</option>
+        <option value="glass">Glass</option>
+      </select>
+      <button id="clear-canvas" title="Clear">
+        <img src="./web/assets/icon-trash.svg" alt="Clear" />
+      </button>
+      <button id="save" title="Save">
+        <img src="./web/assets/icon-save.svg" alt="Save" />
+      </button>
+    </div>
+  </header>
+
+  <main class="fullscreen">
+    <section class="stage">
+      <video id="video" playsinline></video>
+      <canvas id="video-canvas"></canvas>
+      <canvas id="draw-canvas"></canvas>
+    </section>
+  </main>
+
+  <!-- MediaPipe Hands (JS) -->
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+
+  <!-- OpenCV.js for effects -->
+  <script async src="https://docs.opencv.org/4.x/opencv.js" onload="onOpenCvReady()"></script>
+
+  <script src="./app.js"></script>
+</body>
+</html> 

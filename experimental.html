@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hand Draw Experimental</title>
+  <link rel="stylesheet" href="./experimental.css" />
+</head>
+<body>
+  <header class="overlay">
+    <div class="controls" id="controls-top">
+      <button id="clear-canvas" title="Clear">
+        <img src="./web/assets/icon-trash.svg" alt="Clear" />
+      </button>
+      <button id="save" title="Save PNG">
+        <img src="./web/assets/icon-save.svg" alt="Save" />
+      </button>
+      <a id="open-library" href="#" title="Open Library">Library</a>
+    </div>
+    <div class="controls side" id="controls-side">
+      <input id="pen-color" type="color" value="#ff0066" title="Pen Color" />
+      <label title="Pen Size">
+        <input id="pen-size" type="range" min="1" max="40" value="8" />
+      </label>
+      <select id="brush" title="Brush">
+        <option value="normal">Normal</option>
+        <option value="paper">Paper Brush</option>
+      </select>
+      <label class="file-input" title="Add Brush Texture (PNG)">
+        <input id="brush-upload" type="file" accept="image/png" />
+        Add Brush
+      </label>
+      <div class="layers">
+        <select id="layer-select" title="Active Layer"></select>
+        <button id="new-layer" title="Add New Layer">+ Layer</button>
+      </div>
+      <select id="effect" title="Effect">
+        <option value="none">No Effect</option>
+        <option value="paper">Paper</option>
+        <option value="metal">Metal</option>
+        <option value="glass">Glass</option>
+      </select>
+      <input id="lm-color" type="color" value="#22d3ee" title="Landmark Color" />
+    </div>
+  </header>
+
+  <main class="fullscreen">
+    <section class="stage">
+      <div id="frame-overlay" aria-hidden="true"></div>
+      <button id="toggle-draw" class="floating" title="Toggle Drawing">
+        <img src="./web/assets/icon-pen.svg" alt="Toggle Drawing" />
+      </button>
+      <button id="switch-camera" class="floating secondary" title="Switch Camera">
+        <img src="./web/assets/icon-camera.svg" alt="Switch Camera" />
+      </button>
+      <video id="video" playsinline></video>
+      <canvas id="video-canvas"></canvas>
+      <canvas id="draw-canvas" class="paint-layer"></canvas>
+    </section>
+  </main>
+
+  <!-- MediaPipe Hands (JS) -->
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+
+  <!-- OpenCV.js for effects (optional) -->
+  <script async src="https://docs.opencv.org/4.x/opencv.js"></script>
+
+  <script src="./experimental.js"></script>
+</body>
+</html> 
