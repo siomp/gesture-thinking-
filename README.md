@@ -22,7 +22,7 @@ I built a hand gesture tracking tool to draw in space and create memories with i
 This project lets users draw using hand gestures in the browser using MediaPipe Hands (JS). Drawings can be saved to SQLite via a small Python Flask API. Two visual effects (paper, metal) are applied to the drawing canvas using OpenCV.js.
 ```
 ## - Pre 
-*All Experimental files are expo files to make it available on the phone. (Not launchinf rn)*
+*All Experimental files are expo files to make it available on the phone. (Not launching rn)*
 
 - Python 3.9+
 - Node is NOT required. We can use a simple static file server.
