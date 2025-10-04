@@ -9,7 +9,7 @@
 
 
 
-<img width="1200" height="350" alt="Screenshot 2025-10-04 at 11 36 41 AM" src="https://github.com/user-attachments/assets/b10ccf32-0805-43a7-921d-84bcd1698d92" />
+<img width="1200" height="430" alt="Screenshot 2025-10-04 at 11 36 41 AM" src="https://github.com/user-attachments/assets/b10ccf32-0805-43a7-921d-84bcd1698d92" />
 
 
 # Gesture Thinking - Shape reality around you. 
