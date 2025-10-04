@@ -12,7 +12,7 @@ I need a thermal camera (diy!)*
 I built a hand gesture tracking tool to draw in space and create memories with it  to simulate a daily-sketch of your life. Drawing IS NOT reduced to be a graphical or even visual thing but it’s the intricate understanding of gesture of everything that’s real. 
 
 
-## v0 Information:
+## v0 Installation:
 <img width="1058" height="560" alt="Screenshot 2025-10-01 at 1 17 54 AM" src="https://github.com/user-attachments/assets/b1803643-0263-47d7-ae45-0b2338a3f96a" />
 
 
@@ -33,7 +33,7 @@ This project lets users draw using hand gestures in the browser using MediaPipe 
 
 ```use terminal for the following instructions
 ```
-## - 1) Start the API
+## 1) Start the API
 ```
 cd "server"
 python3 -m venv .venv
@@ -43,7 +43,7 @@ python app.py
 ```
 The API will run at `http://127.0.0.1:5001`.
 
-## - 2) Start a local static server for the frontend
+## 2) Start a local static server for the frontend
 Use Python's http server:
 ```
 cd "../web"
