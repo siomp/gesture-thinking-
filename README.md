@@ -8,8 +8,9 @@ Documentation:
 I built a hand gesture tracking tool to draw in space and create memories with it  to simulate a daily-sketch of your life.
 (update 0.5 effect paper + metal ) 
 
-Close hand = stop drawing --
-Open hand = start drawing (only index supported rn) --
-Functions: Clear, Save, Color desk, Size Bar, Start/Stop Drawing. --
-Build in mediapipe, opencv (effects), python and pygame (hand tracking), Java, HTML/Tailwind CSS with paper.design (icons and export effect)
+- Close hand = stop drawing 
+- Open hand = start drawing (only index supported rn) 
+- Functions: 
+*Clear, Save, Color desk, Size Bar, Start/Stop Drawing.*
+*Build in mediapipe, opencv (effects), python and pygame (hand tracking), Java, HTML/Tailwind CSS with paper.design (icons and export effect)*
 
