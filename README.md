@@ -3,7 +3,7 @@
 <img width="1200" height="430" alt="Screenshot 2025-10-04 at 11 36 41 AM" src="https://github.com/user-attachments/assets/b10ccf32-0805-43a7-921d-84bcd1698d92" />
 
 
-# Gesture Thinking - Shape reality around you. 
+# Gesture Thinking - Shape Reality Around You. 
 Not only the physical act but perception, ideation and shaping of the world around you. Analytical thinking led by spatial awareness. 
 *First idea: Build a thermal imagining tool to draw with our energy. (In process)
 I need a thermal camera (diy!)*
@@ -15,7 +15,8 @@ I built a hand gesture tracking tool to draw in space and create memories with i
 ## v0 Installation:
 <img width="1058" height="560" alt="Screenshot 2025-10-01 at 1 17 54 AM" src="https://github.com/user-attachments/assets/b1803643-0263-47d7-ae45-0b2338a3f96a" />
 
-
+## v0.5 Installation:
+Updated verion featuring realistic drawing with brush and collaboration from @Yujia Qian 
 
 
 ```
